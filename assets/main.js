@@ -3,13 +3,17 @@
 const langs = {
   "node.js": "js",
   python: "py",
-  go: "go"
+  go: "go",
+  c: "c",
+  "c++": "cpp"
 }
 const apps = {
   helloworld: [
     "node.js",
     "python",
-    "go"
+    "go",
+    "c",
+    "c++"
   ],
   discord: [
     "node.js",
@@ -25,6 +29,7 @@ let useLanguage = "js"
 $('#app-selector').change(() => {
   useApp = $('#app-selector').val()
   initCommand()
+  useLanguage = $('#language-selector').val()
 });
 $('#language-selector').change(() => useLanguage = $('#language-selector').val());
 
@@ -85,6 +90,7 @@ function getDiscordCode() {
 }
 
 function getCode() {
+  $('#status').text('잠시만 기다려 주세요.')
   switch (useApp) {
     case 'discord':
       getDiscordCode()
@@ -93,6 +99,7 @@ function getCode() {
       _getCode("helloworld", { language: useLanguage })
       break
   }
+  $('#status').text('')
 }
 
 function addKeyValueInput(message) {

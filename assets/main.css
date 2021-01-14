@@ -40,3 +40,23 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
+nav > table td a {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+nav > table td a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+nav > table td:first-child a {
+  margin-left: 0px;
+}
+
+nav > table td a#now {
+  font-weight: bold;
+}

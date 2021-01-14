@@ -35,6 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
     <script defer src="./assets/main.js"></script>
   </head>
   <body>
@@ -53,10 +54,35 @@
       <br />
       <br />
 
+      <select id="app-selector" class="custom-select">
+        <option value="helloworld">Hello, World! 출력하기</option>
+        <option value="discord">디스코드 봇 만들기</option>
+      </select>
+
+      <br />
+      <br />
+
+      <select id="language-selector" class="custom-select">
+        <option value="js">node.js</option>
+        <option value="py">python</option>
+      </select>
+
+      <br />
+      <br />
+
+      <div id="command"></div>
+      <br />
+      <button onclick="getCode()">만들기</button>
+
+      <br />
+      <br />
+
       <div id="code-result">
-        <pre><code id="result" class="js"></code></pre>
-        <p style="color: red">
-          주의: 자동화되어 나온 결과라 보기에 불편할 수 있음.
+        <pre><code id="result" class="js user-select-all"></code></pre>
+        <p style="color: red; font-family: none; font-size: 15px">
+          &#8251;주의&#8251;<br />
+          자동화되어 나온 결과라 보기에 불편할 수 있음.<br />
+          코드 클릭시 자동으로 전체 선택됨.
         </p>
       </div>
     </main>

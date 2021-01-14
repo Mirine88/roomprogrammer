@@ -21,7 +21,21 @@ pre * {
   border-radius: 10px;
 }
 
-pre {
-  width: 90vw;
+pre,
+select,
+div.input-group {
+  width: 90vw !important;
   margin: 0 auto;
+}
+
+div#keys-values div.input-group {
+  margin-bottom: 10px;
+}
+
+button {
+  all: unset;
+  background-color: #7fbbff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }

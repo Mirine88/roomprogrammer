@@ -11,8 +11,7 @@
   text-align: center;
 }
 
-table,
-hr {
+table {
   margin: 0 auto;
 }
 
@@ -24,7 +23,8 @@ pre * {
 
 pre,
 select,
-div.input-group {
+div.input-group,
+hr {
   width: 90vw !important;
   margin: 0 auto;
 }

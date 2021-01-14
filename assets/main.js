@@ -144,7 +144,7 @@ function initCommand() {
 
         <br />
 
-        <button onclick="addKeyValueInput('명령어, 대답')">추가하기</button>`)
+        <button onclick="addKeyValueInput('명령어, 대답')">명령어, 대답 추가하기</button>`)
       break
     default:
       $('#command').html('')

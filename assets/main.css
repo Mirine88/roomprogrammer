@@ -11,7 +11,8 @@
   text-align: center;
 }
 
-table {
+table,
+hr {
   margin: 0 auto;
 }
 

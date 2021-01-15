@@ -77,9 +77,9 @@
       <nav>
         <table>
           <tr>
-            <td><a href="./index.html" id="now">홈</p></td>
+            <td><a href="./index.html">홈</p></td>
             <td><a href="./api.html">API Document</p></td>
-            <td><a href="./comment.html">댓글</p></td>
+            <td><a href="./comment.html" id="now">댓글</p></td>
           </tr>
         </table>
       </nav>
@@ -87,66 +87,53 @@
     <main>
       <br />
       <br />
-
-      <select id="app-selector" class="custom-select">
-        <option value="helloworld">Hello, World! 출력하기</option>
-        <option value="discord">디스코드 봇 만들기</option>
-        <option value="web">웹 만들기</option>
-      </select>
-
-      <br />
-      <br />
-
-      <select id="language-selector" class="custom-select"></select>
-
-      <br />
-      <br />
-
-      <div id="command"></div>
-      <br />
-      <button onclick="getCode()">만들기</button>
-
-      <br />
-      <br />
-
-      <div id="code-result">
-        <pre><code id="result" class="js user-select-all"></code></pre>
-        <p style="color: red; font-family: none; font-size: 15px">
-          &#8251;주의&#8251;<br />
-          자동화되어 나온 결과라 보기에 불편할 수 있음.<br />
-          코드 클릭시 자동으로 전체 선택됨.
-        </p>
-      </div>
-
-      <br />
-      <br />
-      <br />
-
-      <div style="font-size: 17px">
-        <h5 style="font-size: 25px">도움을 주신 분들</h5>
-        많이 봐주세요!
-        <br />
-        <br />favicon:
-        <a target="_blank" href="https://twemoji.twitter.com/"
-          >https://twemoji.twitter.com/</a
-        >
-        <br />제작도움:
-        <a
-          target="_blank"
-          href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
-          >조코딩 (jocoding youtube)</a
-        >
-      </div>
-
-      <br />
-      <br />
-      <br />
-
+    
       <ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-7epa93g9aBmgexQQ" 
- data-ad-width   = "320" 
- data-ad-height  = "100"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        data-ad-unit    = "DAN-7epa93g9aBmgexQQ" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins> 
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+        <br>
+        <br>
+        <div id="commet">
+        <h5 style="font-size: 25px">댓글창을 깨끗하게 사용해주세요.</h5>
+        <a href="mailto:hangbokancoding@gmail.com" style="font-size: 22px">
+          개발자를 도와주세요!<br>
+          <p style="font-size: 15px;">
+            에러 발생, 언어 추가 요청 등은 이 링크를 클릭해주세요.<br>
+            결과를 더 빨리 받아볼 수 있습니다.
+          </p>
+        </a>
+        <br />
+        <br />
+        <div id="disqus_thread" style="width: 90vw; margin: 0 auto"></div>
+        <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+          (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://httpsroomprogrammertk.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </div>
     </main>
   </body>
 </html>

@@ -18,6 +18,9 @@ const apps = {
   discord: [
     "node.js",
     "python"
+  ],
+  web: [
+    "go"
   ]
 }
 
@@ -89,17 +92,44 @@ function getDiscordCode() {
   })
 }
 
+function getWebCode() {
+  const len = $("#keys-values > div").length
+  let paths = []
+  let values = []
+  for (let i = 1; i <= len; i++) {
+    let command = $(`#keys-values > div:nth-child(${i}) .first`).val()
+    let answer = $(`#keys-values > div:nth-child(${i}) .second`).val()
+    if (command.indexOf(',') > -1 || answer.indexOf(',') > -1) {
+      alert("콤마(,)는 경로나 값에 들어갈 수 없습니다.")
+      return
+    }
+    if (values === '') {
+      alert('비어있는 대답은 지원되지 않습니다.')
+      return
+    }
+    paths.push(command)
+    values.push(answer)
+  }
+
+  _getCode('web', {
+    language: useLanguage,
+    paths: paths.join(','),
+    values: values.join(',')
+  })
+}
+
 function getCode() {
-  $('#status').text('잠시만 기다려 주세요.')
   switch (useApp) {
     case 'discord':
       getDiscordCode()
+      break
+    case 'web':
+      getWebCode()
       break
     case 'helloworld':
       _getCode("helloworld", { language: useLanguage })
       break
   }
-  $('#status').text('')
 }
 
 function addKeyValueInput(message) {
@@ -152,6 +182,15 @@ function initCommand() {
         <br />
 
         <button onclick="addKeyValueInput('명령어, 대답')">명령어, 대답 추가하기</button>`)
+      break
+    case 'web':
+      $("#command").html(`<div id="inputs">
+          <div id="keys-values"></div>
+        </div>
+
+        <br />
+
+        <button onclick="addKeyValueInput('웹 경로(path) (슬러시 (/)포함 입력), 출력값')">웹 경로, 출력값 추가하기</button>`)
       break
     default:
       $('#command').html('')

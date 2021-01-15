@@ -90,15 +90,13 @@
       <select id="app-selector" class="custom-select">
         <option value="helloworld">Hello, World! 출력하기</option>
         <option value="discord">디스코드 봇 만들기</option>
+        <option value="web">웹 만들기</option>
       </select>
 
       <br />
       <br />
 
-      <select id="language-selector" class="custom-select">
-        <option value="js">node.js</option>
-        <option value="py">python</option>
-      </select>
+      <select id="language-selector" class="custom-select"></select>
 
       <br />
       <br />
@@ -111,7 +109,6 @@
       <br />
 
       <div id="code-result">
-        <p id="status"></p>
         <pre><code id="result" class="js user-select-all"></code></pre>
         <p style="color: red; font-family: none; font-size: 15px">
           &#8251;주의&#8251;<br />
@@ -146,7 +143,7 @@
 
       <ins
         class="kakao_ad_area"
-        style="display: none; width: 90vw"
+        style="width: 90vw"
         data-ad-unit="DAN-RO3kNbZWH7bHXjzY"
         data-ad-width="320"
         data-ad-height="100"
@@ -163,9 +160,13 @@
 
       <div id="commet">
         <h5 style="font-size: 25px">댓글창을 깨끗하게 사용해주세요.</h5>
-        <a href="mailto:hangbokancoding@gmail.com" style="font-size: 20px"
-          >에러 리포트 (코드 실행 안될 때...)</a
-        >
+        <a href="mailto:hangbokancoding@gmail.com" style="font-size: 22px">
+          개발자를 도와주세요!<br>
+          <p style="font-size: 15px;">
+            에러 발생, 언어 추가 등은 이 링크를 클릭해주세요.<br>
+            결과를 더 빨리 받아볼 수 있습니다.
+          </p>
+        </a>
         <br />
         <br />
         <div id="disqus_thread" style="width: 90vw; margin: 0 auto"></div>

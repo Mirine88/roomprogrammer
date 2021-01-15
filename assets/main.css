@@ -24,7 +24,7 @@ pre * {
 pre,
 select,
 div.input-group,
-hr {
+ins {
   width: 90vw !important;
   margin: 0 auto;
 }

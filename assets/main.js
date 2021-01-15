@@ -63,6 +63,7 @@ function _getCode(app, data) {
     console.log(resp)
     $("pre code").text(resp["result"])
     highlightBlock()
+    if (resp["message"] !== "ok") alert(resp["message"])
   })
 }
 
@@ -131,6 +132,9 @@ function getCode() {
     case 'helloworld':
       _getCode("helloworld", { language: useLanguage })
       break
+  }
+  if ($("pre code").text() === "") {
+
   }
 }
 

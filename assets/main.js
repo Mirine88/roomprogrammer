@@ -123,7 +123,7 @@ function getWebCode() {
 }
 
 function getCode() {
-  if (confirm('실제로 만드시겠습니까?\n시간이 좀 소요될 수 있습니다.')) {
+  if (confirm('실제로 만드시겠습니까?\n시간이 소요될 수 있습니다.')) {
     switch (useApp) {
       case 'discord':
         getDiscordCode()

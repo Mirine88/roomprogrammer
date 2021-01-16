@@ -60,3 +60,7 @@ nav > table td:first-child a {
 nav > table td a#now {
   font-weight: bold;
 }
+
+ins {
+  display: unset !important;
+}

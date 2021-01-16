@@ -6,8 +6,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "KOMACON";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *:not(pre) {
-  font-family: "Cafe24Oneprettynight";
+  font-family: "KOMACON";
   text-align: center;
 }
 

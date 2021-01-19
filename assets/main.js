@@ -4,9 +4,11 @@ const langs = {
   "node.js": "js",
   python: "py",
   go: "go",
+  java: "java",
+  ruby: "rb",
+  rust: "rs",
   c: "c",
-  "c++": "cpp",
-  java: "java"
+  "c++": "cpp"
 }
 const apps = {
   helloworld: [
@@ -14,6 +16,8 @@ const apps = {
     "python",
     "go",
     "java",
+    "ruby",
+    "rust",
     "c",
     "c++"
   ],

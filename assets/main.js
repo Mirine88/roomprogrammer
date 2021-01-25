@@ -103,8 +103,10 @@ function getDiscordCode() {
   switch (useLanguage) {
     case "js":
       $('#remark').html('<a target="_blank" href="https://www.npmjs.com/package/discord.js">discord.js</a> 모듈 사용')
+      break
     case "py":
       $('#remark').html('<a target="_blank" href="https://pypi.org/project/discord.py/">discord.py</a> 모듈 사용')
+      break
 
   }
 }

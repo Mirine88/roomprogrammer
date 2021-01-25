@@ -125,10 +125,12 @@ function getWebCode() {
     paths: paths.join(','),
     values: values.join(',')
   })
+  if (useLanguage === 'js') $('#remark').html('<a target="_blank" href="https://www.npmjs.com/package/express">express</a> 모듈 사용')
 }
 
 function getCode() {
   if (confirm('실제로 만드시겠습니까?\n시간이 소요될 수 있습니다.')) {
+    $('#remark').text('')
     switch (useApp) {
       case 'discord':
         getDiscordCode()

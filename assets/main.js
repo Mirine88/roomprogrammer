@@ -26,6 +26,7 @@ const apps = {
     "python"
   ],
   web: [
+    "node.js",
     "go"
   ]
 }

@@ -99,6 +99,14 @@ function getDiscordCode() {
     commands: commands.join(','),
     answers: answers.join(',')
   })
+
+  switch (useLanguage) {
+    case "js":
+      $('#remark').html('<a target="_blank" href="https://www.npmjs.com/package/discord.js">discord.js</a> 모듈 사용')
+    case "py":
+      $('#remark').html('<a target="_blank" href="https://pypi.org/project/discord.py/">discord.py</a> 모듈 사용')
+
+  }
 }
 
 function getWebCode() {

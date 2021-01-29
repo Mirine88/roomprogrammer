@@ -107,7 +107,6 @@ function getDiscordCode() {
     case "py":
       $('#remark').html('<a target="_blank" href="https://pypi.org/project/discord.py/">discord.py</a> 모듈 사용')
       break
-
   }
 }
 

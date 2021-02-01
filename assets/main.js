@@ -8,7 +8,8 @@ const langs = {
   ruby: "rb",
   rust: "rs",
   c: "c",
-  "c++": "cpp"
+  "c++": "cpp",
+  "c#": "cs"
 }
 const apps = {
   helloworld: [
@@ -19,7 +20,8 @@ const apps = {
     "ruby",
     "rust",
     "c",
-    "c++"
+    "c++",
+    "c#"
   ],
   discord: [
     "node.js",

@@ -25,7 +25,8 @@ const apps = {
   ],
   discord: [
     "node.js",
-    "python"
+    "python",
+    "go"
   ],
   web: [
     "node.js",

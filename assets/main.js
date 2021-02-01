@@ -33,7 +33,6 @@ const apps = {
 
 if (new Date().getMilliseconds() % 2 == 0) $("#programmer-emoji").text("👨‍💻")
 else $("#programmer-emoji").text("👩‍💻")
-if (new Date().getSeconds() % 3 == 0) $("#ad-card").remove()
 
 let useApp = "helloworld"
 let useLanguage = "js"

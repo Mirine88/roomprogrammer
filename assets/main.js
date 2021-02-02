@@ -185,18 +185,31 @@ function getWebCode() {
 
 function getCode() {
   if (confirm('실제로 만드시겠습니까?\n시간이 소요될 수 있습니다.')) {
-    $('#remark').text('')
-    switch (useApp) {
-      case 'discord':
-        getDiscordCode()
-        break
-      case 'web':
-        getWebCode()
-        break
-      case 'helloworld':
-        _getCode("helloworld", { language: useLanguage })
-        break
+    $('#code').hide()
+    $('#spinner').show();
+
+    // const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    function a() {
+      return new Promise(resolve => {
+        $('#remark').text('')
+        switch (useApp) {
+          case 'discord':
+            getDiscordCode()
+            break
+          case 'web':
+            getWebCode()
+            break
+          case 'helloworld':
+            _getCode("helloworld", { language: useLanguage })
+            break
+        }
+        resolve(true)
+      })
     }
+    a().then(() => {
+      $('#spinner').hide()
+      $('#code').show()
+    })
   }
 }
 

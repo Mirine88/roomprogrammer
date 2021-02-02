@@ -105,15 +105,22 @@
     <br>
 
     <div id="code-result">
-      <pre><code id="result" class="js user-select-all"></code></pre>
-      <br>
-      <p id="remark"></p>
-      <br>
-      <p style="color: red; font-family: none; font-size: 15px">
-        &#8251;주의&#8251;<br>
-        자동화되어 나온 결과라 보기에 불편할 수 있음.<br>
-        코드 클릭시 자동으로 전체 선택됨.
-      </p>
+      <svg style="display:none" id="spinner" width="65px" height="65px" viewBox="0 0 66 66"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+
+      <div id="code">
+        <pre><code id="result" class="js user-select-all"></code></pre>
+        <br>
+        <p id="remark"></p>
+        <br>
+        <p style="color: red; font-family: none; font-size: 15px">
+          &#8251;주의&#8251;<br>
+          자동화되어 나온 결과라 보기에 불편할 수 있음.<br>
+          코드 클릭시 자동으로 전체 선택됨.
+        </p>
+      </div>
     </div>
 
     <br>

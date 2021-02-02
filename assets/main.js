@@ -34,17 +34,41 @@ const apps = {
   ]
 }
 
+// show char.
 if (new Date().getMilliseconds() % 2 == 0) $("#programmer-emoji").text("👨‍💻")
 else $("#programmer-emoji").text("👩‍💻")
 
+// useLanguage and useApp change when language selector and app selector change
 let useApp = "helloworld"
 let useLanguage = "js"
 $('#app-selector').change(() => {
   useApp = $('#app-selector').val()
   initCommand()
+  changeFragment($('#app-selector').val())
   useLanguage = $('#language-selector').val()
 });
 $('#language-selector').change(() => useLanguage = $('#language-selector').val());
+
+// fragment
+function initFragment() {
+  let list = []
+  for (let i = 0; i < $('#app-selector option').length; i++)
+    list.push($('#app-selector option')[i].attributes.value.textContent)
+
+  if (list.indexOf(getFragment()) > -1) $('#app-selector').val(getFragment())
+}
+initFragment()
+
+function getFragment() {
+  const parts = location.href.split('#')
+  return parts[1]
+}
+
+function changeFragment(fragment) {
+  const parts = location.href.split('#')
+  location.href = parts[0] + '#' + fragment
+  initFragment()
+}
 
 function highlightBlock() {
   $('pre code#result').attr('class', `${useLanguage} user-select-all`)
@@ -111,7 +135,9 @@ function getDiscordCode() {
       break
     case "go":
       $('#remark').html('<a target="_blank" href="https://github.com/bwmarrin/discordgo">discordgo</a> 모듈 사용')
+      break
   }
+  $('#remark').html($('#remark').html() + "<br>token은 보안상 직접 넣어주세요.")
 }
 
 function getWebCode() {

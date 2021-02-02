@@ -57,8 +57,21 @@ function initFragment() {
     list.push($('#app-selector option')[i].attributes.value.textContent)
 
   if (list.indexOf(getFragment()) > -1) $('#app-selector').val(getFragment())
+  useApp = $('#app-selector').val()
+  initCommand()
+  changeFragment($('#app-selector').val())
+  useLanguage = $('#language-selector').val()
 }
 initFragment()
+
+let oldFragment = ""
+setInterval(() => {
+  let nowFragment = getFragment()
+  if (oldFragment !== nowFragment) {
+    oldFragment = nowFragment
+    initFragment()
+  }
+}, 10)
 
 function getFragment() {
   const parts = location.href.split('#')
@@ -68,7 +81,6 @@ function getFragment() {
 function changeFragment(fragment) {
   const parts = location.href.split('#')
   location.href = parts[0] + '#' + fragment
-  initFragment()
 }
 
 function highlightBlock() {

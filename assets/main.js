@@ -26,7 +26,8 @@ const apps = {
   discord: [
     "node.js",
     "python",
-    "go"
+    "go",
+    "ruby"
   ],
   web: [
     "node.js",
@@ -135,6 +136,9 @@ function getDiscordCode() {
       break
     case "go":
       $('#remark').html('<a target="_blank" href="https://github.com/bwmarrin/discordgo">discordgo</a> 모듈 사용')
+      break
+    case "rb":
+      $('#remark').html('<a target="_blank" href="https://github.com/shardlab/discordrb">discordrb</a> 모듈 사용')
       break
   }
   $('#remark').html($('#remark').html() + "<br>token은 보안상 직접 넣어주세요.")

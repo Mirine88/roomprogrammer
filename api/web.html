@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="naver-site-verification" content="705507609cc1f990761207ebee00558dbae3f19a" />
+  <meta name="google-site-verification" content="1k-0DALWE46agESRp50dhvkw5dO7rXW-QXPuxMoVLzY" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <link rel=" shortcut icon" href="../favicon.ico" />
+  <link rel="icon" href="../favicon.ico" />
+  <title>방구석 프로그래머</title>
+
+  <!-- css -->
+  <!-- hack font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/vs2015.min.css" />
+  <link rel="stylesheet" href="../assets/main.css" />
+
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JJD34NF9J"></script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ebb80d5252f61f7"></script>
+  <script>
+    ndow.dataLayer = window.dataLayer || [];
+    nction gtag() {
+      taLayer.push(arguments);
+      ag("js", new Date());
+
+      ag("config", "G-6JJD34NF9J");
+  </script>
+  <script defer src="../assets/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <table>
+      <tr>
+        <td id="programmer-emoji" style="font-size: 50px">👩‍💻</td>
+        <td style="font-size: 20px">
+          <h1>방구석 프로그래머 API 문서</h1>
+        </td>
+      </tr>
+    </table>
+    <h2>Welcome to Room Programmer API Document</h2>
+    <br>
+    <nav>
+      <table>
+        <tr>
+          <td><a href="/index.html">홈</a></td>
+          <td><a href="/api.html" class="now">API Document</a></td>
+          <td><a href="/comment.html">댓글</a></td>
+        </tr>
+      </table>
+    </nav>
+  </header>
+  <main>
+    <div id="ad-card">
+      <br>
+      <br>
+      <div class="card bg-light mb-3" style="max-width: 18rem; margin: 0 auto;">
+        <div class="card-header">광고</div>
+        <div class="card-body" onclick="$('#ad-card').remove()">
+          <ins class="kakao_ad_area" data-ad-unit="DAN-RO3kNbZWH7bHXjzY" data-ad-width="250" data-ad-height="250"></ins>
+          <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+          <br>
+          <p class="card-text" style="text-align: center;">닫기</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="api-main">
+      <div id="license">
+        <h3>License</h3>
+        <p>
+          따로 연락을 안드려도 <strong><a href="https://roomprogrammer.tk/api">출처</a>만 표기하면 비상업적 또는 상업적으로 사용
+            가능</strong>합니다.<br>
+          저작권자는 이 API(소프트웨어)에 대해서 어떠한 책임도 지지 않습니다.
+        </p>
+      </div>
+      <div>
+        <h3>API</h3>
+        <nav>
+          <table>
+            <tr>
+              <td><a href="helloworld.html">Hello, World! 출력하기</a></td>
+              <td><a href="discord.html">디스코드 봇 만들기</a></td>
+              <td><a href="web.html" class="now">웹 만들기</a></td>
+            </tr>
+          </table>
+        </nav>
+        <br>
+        <hr>
+        <br>
+        <div>
+          <h1>웹 만들기</h1>
+          <br>
+          <br>
+          <h3>요청 (GET)</h3>
+          <p id="api-url" class="user-select-all">roomprogrammerapi.herokuapp.com/web?language=<span
+              class="query">${language}</span>&paths=<span class="query">${paths}</span>&values=<span
+              class="query">${values}</span>
+          </p>
+          <br>
+          <table id="description" class="table table-striped">
+            <thead>
+              <tr>
+                <td>매개변수</td>
+                <td>설명</td>
+                <td>필수</td>
+                <td>비고</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>language</td>
+                <td>얻을 코드의 언어입니다.</td>
+                <td>필수</td>
+                <td>js, go가 지원됨</td>
+              </tr>
+              <tr>
+                <td>paths</td>
+                <td>경로입니다.</td>
+                <td>필수</td>
+                <td>','로 구분하여 입력<br>슬러시('/')를 포함해야합니다.</td>
+              </tr>
+              <tr>
+                <td>values</td>
+                <td>경로에 따른 화면에 나오는 값입니다.</td>
+                <td>필수</td>
+                <td>','로 구분하여 입력<br>values와 길이가 같아야함</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <h3>결과</h3>
+          <br>
+          <table id="description" class="table table-striped">
+            <thead>
+              <tr>
+                <td>매개변수</td>
+                <td>설명</td>
+                <td>비고</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>language</td>
+                <td>선택한 언어를 알려줍니다.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>message</td>
+                <td>결과의 상태를 알려주는 메세지입니다.</td>
+                <td>결과가 정상적일 때: "ok"</td>
+              </tr>
+              <tr>
+                <td>result</td>
+                <td>코드입니다.</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </main>
+</body>
+
+</html>

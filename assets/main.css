@@ -32,7 +32,8 @@ pre * {
 pre,
 select,
 div.input-group,
-ins {
+ins,
+hr {
   width: 90vw !important;
   margin: 0 auto;
 }
@@ -65,12 +66,34 @@ nav > table td:first-child a {
   margin-left: 0px;
 }
 
-nav > table td a#now {
+nav > table td a.now {
   font-weight: bold;
 }
 
 #ad-card ins {
   display: unset !important;
+}
+
+#api-main div {
+  margin-top: 30px;
+}
+
+#api-url {
+  font-family: Hack;
+  background-color: lightgray;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.query {
+  color: #f87232;
+  font-family: Hack;
+}
+
+#description {
+  width: 90vw;
 }
 
 /* spinner */

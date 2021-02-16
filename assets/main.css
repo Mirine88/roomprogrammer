@@ -33,7 +33,8 @@ pre,
 select,
 div.input-group,
 ins,
-hr {
+hr,
+#disqus_thread {
   width: 90vw !important;
   margin: 0 auto;
 }

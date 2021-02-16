@@ -96,6 +96,10 @@ nav > table td a.now {
   width: 90vw;
 }
 
+a.no-highlight {
+  color: black !important;
+}
+
 /* spinner */
 #spinner {
   -webkit-animation: rotator 1.4s linear infinite;
